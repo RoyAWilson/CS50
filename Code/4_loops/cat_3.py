@@ -1,1 +1,1 @@
-print('Meow\n' * 3)
+print('Meow\n' * 3, end = "")
