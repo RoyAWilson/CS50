@@ -5,4 +5,4 @@ student_list_info = [
     {'name': 'Draco', 'house':'Slytherin', 'patronus': None}
 ]
 for student in student_list_info:
-    print(student['name'], student['house'])
+    print(student['name'], student['house'], student['patronus'], sep = ', ')
