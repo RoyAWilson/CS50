@@ -2,6 +2,10 @@
 
 name = input("What's your name? ").strip().title()
 
+# Split out the first and last name:
+
+first, second = name.split(' ')
+
 # Say hello to the user:
 
-print(f'Hello, {name}')
+print(f'Hello, {first}')
