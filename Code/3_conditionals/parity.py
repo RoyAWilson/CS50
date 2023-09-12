@@ -21,6 +21,6 @@ def iseven(n):
     calculate if x is even or odd
 
     '''
-    return True if n % 2 == 0 else False
+    return n % 2
 
 main()
