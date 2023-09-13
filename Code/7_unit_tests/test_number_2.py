@@ -4,6 +4,7 @@ Unit test number with pytest
 
 '''
 
+import pytest
 from number import square
 
 def test_postive():
@@ -16,4 +17,7 @@ def test_nagative():
     
 def test_zero():
     assert square(0) == 0
-    
+
+def test_str():
+    with pytest.raises(TypeError):
+        square('cat')
