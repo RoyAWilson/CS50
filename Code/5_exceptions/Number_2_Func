@@ -28,6 +28,8 @@ def get_int():
             return int(input('What\'s x? '))
         except ValueError:
             print('Please only type an integer')
+            # except could also be pass will just loop with question until the
+            # value entered is correct type without message.
         
         # using return will cause the loop to break and return the value.
 
