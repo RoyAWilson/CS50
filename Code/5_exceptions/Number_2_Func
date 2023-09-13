@@ -11,13 +11,13 @@ def main():
     main function
     
     '''
-    x = get_int()
+    x = get_int('What\s x? ')
     print(f'x is {x}')
 
 
 # using try.  Will also catch entering float here.
 
-def get_int():
+def get_int(prompt):
     '''
     
     function to get an integer input from user, with error handling.
@@ -25,7 +25,7 @@ def get_int():
     '''
     while True:
         try:
-            return int(input('What\'s x? '))
+            return int(input(prompt))
         except ValueError:
             print('Please only type an integer')
             # except could also be pass will just loop with question until the
