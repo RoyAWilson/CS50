@@ -1,0 +1,8 @@
+Follow along to YouTube video
+URL:
+https://www.youtube.com/watch?v=nLRL_NcnK-4&list=WL&index=26&t=14831s
+
+Presented by David Malan.
+
+Title of video:
+Harvard CS50’s Introduction to Programming with Python – Full University Course
