@@ -4,7 +4,7 @@ introduction to modules and libraries
 
 '''
 
-import random
+from random import choice
 
-coin = random.choice(['Heads', 'Tails'])
+coin = choice(['Heads', 'Tails'])
 print(coin)
