@@ -1,0 +1,34 @@
+
+'''
+
+basic error handling
+
+'''
+
+def main():
+    '''
+    
+    main function
+    
+    '''
+    x = get_int()
+    print(f'x is {x}')
+
+
+# using try.  Will also catch entering float here.
+
+def get_int():
+    '''
+    
+    function to get an integer input from user, with error handling.
+    
+    '''
+    while True:
+        try:
+            return int(input('What\'s x? '))
+        except ValueError:
+            print('Please only type an integer')
+        
+        # using return will cause the loop to break and return the value.
+
+main()
