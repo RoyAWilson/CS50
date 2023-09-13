@@ -28,3 +28,9 @@ import sys
 
 
 # For multiple arguments:
+
+if len(sys.argv) < 2:
+    sys.exit('Too few arguments passed')
+for arg in sys.argv[1:]:
+    print('Hello, my name is ',arg)
+# Adding the slice to argv grabs everything including element 1 to last element of the list.
