@@ -8,7 +8,7 @@ import csv
 
 students = []
 student = {}
-with open('new_name.csv','r', encoding='utf-8') as file:
+with open('../../Data/new_name.csv','r', encoding='utf-8') as file:
     reader = csv.reader(file)
     for name, home in reader:
         student = {'name': name, 'home': home}

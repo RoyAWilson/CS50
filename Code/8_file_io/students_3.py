@@ -4,7 +4,7 @@ Simple read CSV file and sort by house with lambda
 '''
 students = []
 student = {}
-with open('Students.csv','r', encoding='utf-8') as file:
+with open('../../Data/Students.csv','r', encoding='utf-8') as file:
     for line in file:
         name, house = line.rstrip().split(',')
         student = {'name': name, 'house': house}

@@ -7,7 +7,7 @@ import csv
 
 name, home = input('What is your name? '), input('What is your home? ')
 
-with open('names_writer.csv', 'a', newline='') as file:
+with open('../../Data/names_writer.csv', 'a', newline='') as file:
     writer = csv.writer(file)
     writer.writerow([name, home])
 

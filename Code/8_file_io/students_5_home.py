@@ -8,7 +8,7 @@ import csv
 
 students = []
 student = {}
-with open('names_headers.csv','r', encoding='utf-8') as file:
+with open('../../Data/names_headers.csv','r', encoding='utf-8') as file:
     reader = csv.DictReader(file)
     for row in reader:
         students.append({'name': row['name'], 'home': row['home']})
