@@ -3,3 +3,7 @@ Code/7_unit_tests/__pycache__/number.cpython-311.pyc
 Code/7_unit_tests/__pycache__/test_number_2.cpython-311-pytest-7.4.2.pyc
 Code/7_unit_tests/__pycache__/test_number.cpython-311-pytest-7.4.2.pyc
 Code/7_unit_tests/__pycache__/test_hello.cpython-311-pytest-7.4.2.pyc
+Code/7_unit_tests/tests/__init__.py
+Code/7_unit_tests/tests/test_name.py
+Code/7_unit_tests/tests/__pycache__/__init__.cpython-311.pyc
+Code/7_unit_tests/tests/__pycache__/test_name.cpython-311-pytest-7.4.2.pyc
