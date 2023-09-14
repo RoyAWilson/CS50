@@ -1,6 +1,6 @@
 '''
 Simple read CSV file and sort by home with lambda and file containing
-gramatical commas.
+gramatical commas and now headers too using a dictionary.
 
 '''
 
@@ -8,11 +8,10 @@ import csv
 
 students = []
 student = {}
-with open('new_name.csv','r', encoding='utf-8') as file:
-    reader = csv.reader(file)
-    for name, home in reader:
-        student = {'name': name, 'home': home}
-        students.append(student)
+with open('names_headers.csv','r', encoding='utf-8') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        students.append({'name': row['name'], 'home': row['home']})
 file.close()
 
 # Grab the key with a lambda functin:
