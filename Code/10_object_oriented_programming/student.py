@@ -11,6 +11,8 @@ def main():
     '''
 
     student = get_student()
+    if student[0] == 'Padma':
+        student[1] = 'Ravenclaw'
     print(f'{student[0]} from {student[1]}')
 
 def get_student():
@@ -21,9 +23,8 @@ def get_student():
     '''
     name = input('Name: ').strip().title()
     house = input('House: ').strip().title()
-    return name, house
-# I think I would prefer to return a dictionary as easier to write to a database
-# and is mutable rather than unmutable
+    return [name, house]
+# return changed to list to allow editing of the input if necessary.
 
 if __name__ == '__main__':
     main()
