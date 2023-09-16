@@ -21,12 +21,14 @@ def get_student():
     return a student
     
     '''
-    name = input('Name: ').strip().title()
-    house = input('House: ').strip().title()
-    return {'Name': name, 'House': house}
-# return changed to Dictionary also allows editing of the input if necessary.
-# my guess at how to do it.  Lecturer came up with a longer version.
+    
+    student = {}
+    
+    student['Name'] = input('Name: ').strip().title()
+    student['House'] = input('House: ').strip().title()
+    return student
+
+# lecturer's version seems to do exactly the same
 
 if __name__ == '__main__':
     main()
-    
