@@ -28,7 +28,8 @@ def get_student():
     student['House'] = input('House: ').strip().title()
     return student
 
-# lecturer's version seems to do exactly the same
+# lecturer's version seems to do exactly the same.  Lol then he immediately changed the code to what I had
+# in the first place.
 
 if __name__ == '__main__':
     main()
