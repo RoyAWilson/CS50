@@ -19,20 +19,35 @@ class Student:
         
         '''
         if not name:
-            raise ValueError('Missing name')
-        if house not in [ 'Gryffindor', 'Hufflepuff', 'Slytherin', 'Ravenclaw' ]:
-            raise ValueError('Invalid house')
+            raise ValueError('Missing Name')
         self.name = name
         self.house = house
         self.patronus = patronus
 
     def __str__(self):
         return f'{self.name} from {self.house} patronus {self.patronus}'
-    
+
+    # Getter
+    @property
+    def house(self):
+        '''
+        Getter for House
+        '''
+        return self._house
+
+    @house.setter
+    def house(self, house):
+        '''
+        Setter for House
+        '''
+        if house not in ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin']:
+            raise ValueError("Invalid House")
+        self._house = house
+
     def charm(self):
         '''
         Return an emoji of the patronus or a wand in the case of none'''
-        
+
         match self.patronus:
             case 'Stag':
                 return '🦌'
@@ -43,8 +58,8 @@ class Student:
             case _:
                 return '🪄'
 
-    # Really there should be a try:...except errortype at the end of this code to catch errors
-    # before returning the Student to the caller.
+# Really there should be a try:...except errortype at the end of this code to catch errors
+# before returning the Student to the caller.
 
 def main():
 
@@ -54,8 +69,9 @@ def main():
     '''
 
     student = get_student()
+    # student.house = '4 The Street, The Town'
     print(student)
-    print(f'Expecto Patronum {student.charm()}')
+
 
 def get_student():
     '''
