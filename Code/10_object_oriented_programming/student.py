@@ -10,25 +10,20 @@ def main():
     
     '''
 
-    name = get_name()
-    house = get_house()
-    print(f'{name} from {house}')
+    student = get_student()
+    print(f'{student[0]} from {student[1]}')
 
-def get_name():
-    '''
-    return he name
-    
-    '''
-    return input('Name: ')
-
-def get_house():
+def get_student():
     '''
     
-    return the house
+    return a student
     
     '''
-    return input('House: ')
-
+    name = input('Name: ').strip().title()
+    house = input('House: ').strip().title()
+    return name, house
+# I think I would prefer to return a dictionary as easier to write to a database
+# and is mutable rather than unmutable
 
 if __name__ == '__main__':
     main()
