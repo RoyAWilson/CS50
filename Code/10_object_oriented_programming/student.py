@@ -11,9 +11,9 @@ def main():
     '''
 
     student = get_student()
-    if student[0] == 'Padma':
-        student[1] = 'Ravenclaw'
-    print(f'{student[0]} from {student[1]}')
+    if student["Name"] == 'Padma':
+        student["House"] = 'Ravenclaw'
+    print(f'{student["Name"]} from {student["House"]}')
 
 def get_student():
     '''
@@ -23,8 +23,9 @@ def get_student():
     '''
     name = input('Name: ').strip().title()
     house = input('House: ').strip().title()
-    return [name, house]
-# return changed to list to allow editing of the input if necessary.
+    return {'Name': name, 'House': house}
+# return changed to Dictionary also allows editing of the input if necessary.
+# my guess at how to do it.  Lecturer came up with a longer version.
 
 if __name__ == '__main__':
     main()
