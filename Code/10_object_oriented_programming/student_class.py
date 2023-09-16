@@ -69,6 +69,9 @@ def main():
     '''
 
     student = get_student()
+    # Print statement to test that programmatically added incorrect information
+    # not validated after the fact.
+    
     # student.house = '4 The Street, The Town'
     print(student)
 
