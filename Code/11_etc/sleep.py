@@ -9,11 +9,10 @@ def main():
 ## This looks pretty dangerous!  There is no control over the upper limit of sheep to produce!
 def sheep(n):
     # return '🐏' * n
-    flock = []
     for i in range(n):
-        flock.append('🐏' * i)
-    return flock
-
+        yield '🐏' * i
+        ## this will return 1 value at a time.  If return were used it would return zero and jump out of the loop
+        # back into main.  Still think this could do with an upper bound on the iterations allowable.
 if __name__ == '__main__':
     main()
     
