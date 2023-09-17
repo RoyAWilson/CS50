@@ -8,10 +8,9 @@ students = [
 # print(type(students))
 # create a list of houses:
 
-houses = []
+houses = set()
 
 for student in students:
-    if student['house'] not in houses:
-        houses.append(student['house'])
+    houses.add(student['house'])
 for house in sorted(houses):
     print(house)
