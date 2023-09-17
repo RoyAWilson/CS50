@@ -1,9 +1,10 @@
 # to take an input and yell it back in all caps
 
 def main():
-    yell(['This', 'is', 'CS50'])
+    yell('This', 'is', 'CS50')
 
-def yell(words):
+def yell(*words):
+    # *words is just a rename of *args
     uppercased = []
     for word in words:
         uppercased.append(word.upper())
