@@ -2,8 +2,11 @@
 constants intro
 '''
 
-MEOWS = 3
+class Cat:
+    MEOWS = 3 #Class variable
+    def meow(self):
+        for _ in range(Cat.MEOWS): # variable has class name so only the var inside the class used
+            print('meow')
 
-MEOWS = 4
-for _ in range(MEOWS):
-    print('meow')
+cat = Cat()
+cat.meow()
