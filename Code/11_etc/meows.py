@@ -1,16 +1,17 @@
-## Meow to run for the command line.
+## Meow to run for the command line.  Using argparse library
 
-import sys
+import argparse
 
-if len(sys.argv) == 1:
+parser = argparse.ArgumentParser()
+
+# Configure argparser to recognise the argument we want to pass and parse
+
+parser.add_argument('-n')
+args = parser.parse_args()
+# argparser will automaticalls read sys.argsv for me.  No need to bother doing it for myself
+# args will now contain all the arguments passed at the command line and can be
+# iterated over using a loop:
+
+# start loop in a the range of
+for _ in range(int(args.n)):
     print('meow')
-## check if len of argsv is 3 and that the second entry is -n
-elif len(sys.argv) == 3 and sys.argv[1] == '-n':
-    # if so then grab second entry and covert to integer
-    n = int(sys.argv[2])
-    # pring number of meows with a loop.
-    for _ in range(n):
-        print('meow')
-    
-else:
-    print('Usage of: meows.py')
