@@ -1,15 +1,16 @@
-def meow(n: int) -> str:
-    '''
-    to meow n times
-    
-    :param n: Number of tiems to meow
-    :type n: int
-    :raise TypeError: if n is not an int
-    :return: A string of n meows, one per line
-    :rtype: str
-    '''
-    return 'meow\n' * n
+## Meow to run for the command line.
 
-number: int = int(input('Number: '))
-meows: str = meow(number)
-print(meows)
+import sys
+
+if len(sys.argv) == 1:
+    print('meow')
+## check if len of argsv is 3 and that the second entry is -n
+elif len(sys.argv) == 3 and sys.argv[1] == '-n':
+    # if so then grab second entry and covert to integer
+    n = int(sys.argv[2])
+    # pring number of meows with a loop.
+    for _ in range(n):
+        print('meow')
+    
+else:
+    print('Usage of: meows.py')
