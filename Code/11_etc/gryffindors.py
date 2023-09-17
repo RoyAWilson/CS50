@@ -1,16 +1,18 @@
 students = [
-    {'name': 'Hermione', 'house':'Gryffindor'},
-    {'name': 'Harry', 'house': 'Gryffindor'},
-    {'name': 'Ron', 'house': 'Gryffindor'},
-    {'name': 'Draco', 'house': 'Slytherin'},
-    {'name': 'Padma', 'house': 'Ravenclaw'},
+    {"name": "Hermione", "house": "Gryffindor"},
+    {"name": "Harry", "house": "Gryffindor"},
+    {"name": "Ron", "house": "Gryffindor"},
+    {"name": "Draco", "house": "Slytherin"},
+    {"name": "Padma", "house": "Ravenclaw"},
 ]
+
 
 def is_gryffindor(s):
     # define a function to pass to the filter function
-    return  s['house'] == 'Gryffindor'
+    return s["house"] == "Gryffindor"
+
 
 gryffindors = filter(is_gryffindor, students)
 
-for gryffindor in sorted(gryffindors, key = lambda s: s['name']):
-    print(gryffindor['name'])
+for gryffindor in sorted(gryffindors, key=lambda s: s["name"]):
+    print(gryffindor["name"])
