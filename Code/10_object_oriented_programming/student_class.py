@@ -18,14 +18,31 @@ class Student:
         self to initialise the objects required
         
         '''
-        if not name:
-            raise ValueError('Missing Name')
+
         self.name = name
         self.house = house
         self.patronus = patronus
 
     def __str__(self):
         return f'{self.name} from {self.house} patronus {self.patronus}'
+    
+    # getter for name:
+    
+    @property
+    def name(self):
+        '''
+        Getter for name
+        '''
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        '''
+        Setter for House
+        '''
+        if not name:
+            raise ValueError('Missing Name')
+        self._name = name
 
     # Getter
     @property
@@ -88,8 +105,6 @@ def get_student():
     patronus = input('Patronus: ')
     return Student(name, house, patronus)
 
-## Help - how can this class work, where is the .. = self...
-## Why did the lecturer write an empty class?
 
 if __name__ == '__main__':
     main()
